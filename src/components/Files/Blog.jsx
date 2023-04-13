@@ -43,7 +43,9 @@ function BlogPost({ blog, blogName, setBlogName, blogTime, setBlogTime }) {
       toast.success("Successfully bookmarked");
     }
   }
-
+  const handleTime = (time) => {
+    setBlogTime(blogTime + time);
+  }
 
   return (
     <div className="blog-post">
@@ -66,6 +68,7 @@ function BlogPost({ blog, blogName, setBlogName, blogTime, setBlogTime }) {
           </div>
         </div>
         <h2>{blog.title}</h2>
+        <button onClick={() => handleTime(blog.time)} > mark as read {blog.time}</button>
       </div>
     </div>
   );
