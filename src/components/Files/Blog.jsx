@@ -43,7 +43,7 @@ function BlogPost({ blog, blogName, setBlogName, blogTime, setBlogTime }) {
       toast.success("Successfully bookmarked");
     }
   }
- 
+
 
   return (
     <div className="blog-post">
@@ -60,7 +60,9 @@ function BlogPost({ blog, blogName, setBlogName, blogTime, setBlogTime }) {
             </div>
           </div>
           <div>
-            
+            <p onClick={() => handleTitle(blog.title)} >
+              05 min read <FontAwesomeIcon icon={faBookmark} />
+              </p>
           </div>
         </div>
         <h2>{blog.title}</h2>
